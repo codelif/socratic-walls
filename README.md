@@ -6,7 +6,7 @@ A wallpaper generator by taking snapshots of mandelbrot set (and more in future 
 
 Well that's correct, but all of them lacked in certain areas, so built this because:
 
-- I could not find one which would randomly pick a location which would also be interesting (not just a black spot)
+- could not find one which would randomly pick a location which would also be interesting (not just a black spot)
 - Most of them used simple coloring algorithms
 - Graphics are fun ;)
 
