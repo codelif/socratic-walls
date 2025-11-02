@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socratic Walls</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="logo">
+          <h3>Socratic Walls</h3>
+        </div>
+        <div class="item-2">
+          <div class="download-wrapper">
+            <button class="save-toggle">Download</button>
+            <div class="save-menu" id="saveMenu">
+              <div class="save-title">Download as</div>
+              <button data-w="1280" data-h="720" class="save-item">1280 × 720</button>
+              <button data-w="1920" data-h="1080" class="save-item">1920 × 1080</button>
+              <button data-w="2560" data-h="1440" class="save-item">2560 × 1440</button>
+              <button data-w="3440" data-h="1440" class="save-item">3440 × 1440</button>
+              <button data-w="3840" data-h="2160" class="save-item">3840 × 2160</button>
+            </div>
+          </div>
+          <button class="reset_nav">Reset</button>
+        </div>
+      </header>
+
+      <main class="banner_colors">
+        <section class="image">
+          <img
+            id="fractalImage"
+            width="1080"
+            height="660"
+            alt="Mandelbrot view"
+            aria-label="Mandelbrot view"
+            draggable="false"
+          />
+          <div id="previewLayer" class="preview-layer" style="display:none;"></div>
+          <div class="canvas-overlay top-left" id="infoOverlay">Use mouse wheel to zoom • drag to pan</div>
+        </section>
+
+        <aside class="navigantions">
+          <div class="nav_text"><h2>NAVIGATIONS</h2></div>
+
+          <div class="zoom">
+            <button class="zoomout">Zoom Out</button>
+            <button class="zoomin">Zoom In</button>
+          </div>
+
+          <button class="random_view">Randomise</button>
+
+          <div class="other">
+            <div class="colormode_section">
+              <div class="colormode_text">
+                <h4>color mode</h4>
+                <div class="colormode">
+                  <select id="select_cm">
+                    <option value="0">Smooth HSV</option>
+                    <option value="1">Long Gradient</option>
+                    <option value="2">Periodic</option>
+                    <option value="3">Angle</option>
+                    <option value="4" selected>Histogram</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="palette-panel" id="backendPalettePanel" style="display:none;">
+              <h4 class="right-palette-title">palettes</h4>
+              <div class="palette-actions">
+                <button id="addRandomPalette" class="palette-action-btn">+ random palette</button>
+              </div>
+              <div id="backendPaletteList" class="backend-palette-list"></div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
